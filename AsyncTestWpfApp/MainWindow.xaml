@@ -6,7 +6,19 @@
         xmlns:local="clr-namespace:AsyncTestWpfApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="28" Grid.Row="1" Margin="10,0">Simple Async Demo App</TextBlock>
+        <Button x:Name="btnExecuteSync" Content="Normal Execute" Margin="10" Grid.Row="2" Click="BtnExecuteSync_Click"/>
+        <Button x:Name="btnExecuteAsync" Content="Async Execute" Margin="10" Grid.Row="3" Click="BtnExecuteAsync_Click"/>
+        <Button x:Name="btnExecuteParallelAsync" Content="Parallel Async Execute" Margin="10" Grid.Row="4" Click="BtnExecuteParallelAsync_Click"/>
+        <TextBlock x:Name="txtResults" Margin="10" Grid.Row="5"/>
     </Grid>
 </Window>
